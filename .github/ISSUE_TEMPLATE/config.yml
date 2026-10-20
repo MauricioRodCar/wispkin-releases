@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Opinión y sugerencias
+    url: "https://forms.gle/bBhzJXpousYvmrnL9"
+    about: Cuéntanos qué te gustó y qué cambiarías.
+  - name: Problema de seguridad
+    url: "mailto:wispkin.app@gmail.com"
+    about: Si algo expone tu clave o hace algo sin permiso, escríbenos en privado; no abras un issue público.
