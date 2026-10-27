@@ -1,78 +1,74 @@
 # Wispkin
 
-**Tu asistente de IA, con cara y en tu escritorio.**
+**English** · [Español](README.es.md)
 
-Wispkin es una app para Windows que pone a tu asistente de IA en el escritorio. **Chispa**, un pequeño fuego fatuo azul, flota sobre tus ventanas, reacciona a lo que hace la IA (pensar, trabajar, pedir permiso, terminar) y, al darle clic, abre un globo para conversar.
+**Your AI assistant, with a face, right on your desktop.**
 
-- **Funciona con Claude**, con tu propia clave de API de Anthropic: el asistente puede leer y editar archivos y ejecutar comandos en tu equipo, **siempre pidiéndote permiso antes**. Pagas solo tu uso, directamente a Anthropic, y Wispkin te muestra lo que llevas gastado hoy, con un tope diario opcional.
-- **Funciona con Ollama**: modelos que corren en tu PC, gratis y sin que la conversación salga de tu equipo. En esta versión solo conversa.
-- **Chispa crece contigo**: energía, humor, niveles y variantes desbloqueables. Nunca enferma ni te culpa por no usarlo, y se puede apagar.
-- **Abre en Claude Code** la misma conversación, e importa **Codex Pets** y **Shimeji**.
-- **Privado**: sin cuentas, sin telemetría, sin publicidad.
+Wispkin is a Windows app that puts your AI assistant on your desktop. **Chispa**, a tiny blue will-o'-the-wisp, floats over your windows and reacts to what the AI is doing: thinking, working, asking for permission, finishing. Click it to open a chat bubble.
 
-> 🧪 **Beta.** Wispkin está en beta: puede tener fallos. Usa una carpeta de prueba o un proyecto con copia de seguridad cuando le pidas trabajar con archivos.
+- **Works with Claude** using your own Anthropic API key. The assistant can read and edit files and run commands on your computer, **always asking your permission first**. You pay only for your own usage, directly to Anthropic, and Wispkin shows how much you've spent today, with an optional daily cap.
+- **Works with Ollama**: models that run on your PC, free, and your conversation never leaves your machine. In this version, Ollama is chat only.
+- **Chispa grows with you**: energy, mood, levels and unlockable variants. It never gets sick, never guilt-trips you for not using it, and you can turn it off.
+- **Opens the same conversation in Claude Code**, and imports **Codex Pets** and **Shimeji** avatars.
+- **Private**: no accounts, no telemetry, no ads.
 
-![Chispa en el escritorio con el globo abierto: le preguntan si ayuda a ordenar las descargas y responde cómo lo haría](captura.png)
+> 🧪 **Beta.** Wispkin is in beta and may have bugs. When you ask it to work with files, use a test folder or a project you have backed up.
+>
+> 🌐 **The app's interface is in Spanish for now.** English is coming.
 
-## Descarga
+![Chispa on the desktop with its chat bubble open: it's asked to help organize the Downloads folder and explains how it would do it](captura.png)
 
-Descarga el instalador `Wispkin-Setup-<versión>.exe` desde **[Releases](../../releases/latest)**. Wispkin se actualiza solo cuando hay una versión nueva.
+## Download
 
-Muy pronto también en Microsoft Store.
+Download the `Wispkin-Setup-<version>.exe` installer from **[Releases](../../releases/latest)**. Wispkin updates itself when a new version is available.
 
-### Aviso de Windows SmartScreen
+Coming soon to the Microsoft Store.
 
-El instalador todavía no está firmado con un certificado de pago, así que Windows puede mostrar **"Windows protegió tu PC"**. Para continuar: **Más información → Ejecutar de todas formas**.
+### Windows SmartScreen warning
 
-Si prefieres comprobar el archivo, compara su SHA-256 con el que aparece en las notas de la versión:
+The installer isn't signed with a paid certificate yet, so Windows may show **"Windows protected your PC"**. To continue, click **More info → Run anyway**.
+
+If you'd like to verify the file, compare its SHA-256 hash with the one in the release notes:
 
 ```powershell
-Get-FileHash .\Wispkin-Setup-<versión>.exe
+Get-FileHash .\Wispkin-Setup-<version>.exe
 ```
 
-## Requisitos
+## Requirements
 
-- Windows 10 (1809 o posterior) u 11, 64 bits.
-- **Para Claude:** una cuenta de Anthropic con clave de API (de pago, por uso). Recomendamos una clave solo para Wispkin, con límite de gasto.
-- **Para Ollama:** [Ollama](https://ollama.com/download) instalado y un modelo descargado (por ejemplo `ollama pull llama3.2`). Para modelos útiles, una GPU con 6–8 GB de VRAM o más; sin GPU funciona, pero lento.
-- **Opcional:** Claude Code, para "Abrir en Claude Code".
+- Windows 10 (1809 or later) or 11, 64-bit.
+- **For Claude:** an Anthropic account with an API key (paid, usage-based). We recommend a key used only for Wispkin, with a spending limit.
+- **For Ollama:** [Ollama](https://ollama.com/download) installed and a model downloaded (for example `ollama pull llama3.2`). Useful models need a GPU with 6–8 GB of VRAM or more. Without a GPU it works, but slowly.
+- **Optional:** Claude Code, for "Open in Claude Code".
 
-## Primeros pasos
+## Getting started
 
-1. Instala y abre Wispkin. Chispa aparece en tu escritorio y un icono en la bandeja.
-2. Haz clic en Chispa y elige tu cerebro: **Claude** (pega tu clave) u **Ollama** (elige un modelo).
-3. Escríbele. Cuando quiera tocar algo en tu equipo, te pedirá permiso.
+1. Install and open Wispkin. Chispa appears on your desktop and an icon appears in the system tray.
+2. Click Chispa and choose its brain: **Claude** (paste your key) or **Ollama** (pick a model).
+3. Write to it. Whenever it wants to touch something on your computer, it asks your permission first.
 
-Atajo: **Ctrl+Alt+P** abre y cierra el globo. La bandeja tiene *No molestar*, el cambio de avatar e *Importar avatar…*.
+Shortcut: **Ctrl+Alt+P** opens and closes the chat bubble. The tray menu has *Do not disturb*, avatar switching and *Import avatar…*.
 
-## Privacidad y términos
+## Privacy and terms
 
-- Todo se guarda en tu equipo (`%APPDATA%\wispkin`); tus claves, cifradas con el cifrado de Windows.
-- Tus conversaciones van directamente de tu equipo al proveedor que elegiste, con tu clave. Wispkin no tiene servidores que las reciban.
-- Sin telemetría ni analítica. Para buscar actualizaciones, la app consulta este repositorio en GitHub.
+- Everything is stored on your computer (`%APPDATA%\wispkin`). Your keys are encrypted with Windows encryption.
+- Your conversations go directly from your computer to the provider you chose, using your key. Wispkin has no servers that receive them.
+- No telemetry or analytics. To check for updates, the app queries this GitHub repository.
 
-Lee la [política de privacidad](PRIVACIDAD.md) y los [términos de uso](TERMINOS.md).
+Read the [privacy policy](PRIVACIDAD.md) and the [terms of use](TERMINOS.md) (currently in Spanish).
 
-## Reportar un fallo o dar tu opinión
+## Report a bug or share feedback
 
-- **Fallos:** abre un [issue](../../issues/new) con la plantilla. Los issues son públicos: **nunca pegues tu clave** ni información privada.
-- **Opinión:** [formulario de opinión](https://forms.gle/bBhzJXpousYvmrnL9) (2 minutos).
-- **Seguridad** (por ejemplo, algo que exponga tu clave o una acción sin permiso): no abras un issue público; escribe a wispkin.app@gmail.com.
+- **Bugs:** open an [issue](../../issues/new) using the template. Issues are public, so **never paste your API key** or private information.
+- **Feedback:** [feedback form](https://forms.gle/bBhzJXpousYvmrnL9) (2 minutes).
+- **Security** (for example, something that exposes your key or an action taken without permission): don't open a public issue. Email wispkin.app@gmail.com instead.
 
-## Sobre este repositorio
+## About this repository
 
-Aquí solo se publican los instaladores, las notas de versión y el canal de actualizaciones de Wispkin. El código fuente no es público por ahora.
+This repository only hosts Wispkin's installers, release notes and update channel. The source code is not public for now.
 
 ---
 
-Wispkin es un proyecto independiente. **No está afiliado, patrocinado ni respaldado por Anthropic, OpenAI, Ollama ni Microsoft.** Claude es una marca de Anthropic; Codex, de OpenAI; Ollama, de sus titulares. Se mencionan solo para indicar compatibilidad.
+Wispkin is an independent project. **It is not affiliated with, sponsored by or endorsed by Anthropic, OpenAI, Ollama or Microsoft.** Claude is a trademark of Anthropic, Codex of OpenAI, and Ollama of its respective owners. They are mentioned only to indicate compatibility.
 
 © 2026 Wisplight Studio
-
----
-
-## In English
-
-**Wispkin** is a Windows app that puts your AI assistant on your desktop, with a face: **Chispa**, a tiny blue will-o'-the-wisp that reacts to what the AI is doing and opens a chat when you click it. Works with Claude (bring your own Anthropic API key; the assistant can read/edit files and run commands, always asking first) or with Ollama (local, free, private). No accounts, no telemetry. **The interface is in Spanish for now.**
-
-Download the installer from [Releases](../../releases/latest). Windows SmartScreen may warn that the app is unrecognized because it isn't signed yet: click **More info → Run anyway**. Requirements: Windows 10 (1809+) or 11, 64-bit; an Anthropic API key for Claude, or Ollama (a GPU with 6–8 GB of VRAM recommended). Report bugs in [Issues](../../issues/new) (never paste your key). Not affiliated with Anthropic, OpenAI, Ollama, or Microsoft.
